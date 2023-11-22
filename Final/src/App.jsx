@@ -1,11 +1,8 @@
 import React from 'react';
 import Home from "./components/pages/Home.jsx";
-import './App.css'
 import {Route, Routes} from "react-router-dom";
-
-
-import Log from "./components/log/Log.jsx";
 import PrivateRoad from "./components/utils/router/PrivateRoad.jsx";
+import AuthRootComponent from "./components/auth/AuthRootComponent.jsx";
 
 
 
@@ -16,7 +13,8 @@ const App = () => {
                 <Route element={<PrivateRoad />}>
                     <Route path='/' element={<Home />}/>
                 </Route>
-                <Route path={'login'} element={<Log/>}/>
+                <Route path={'/login'} element={<AuthRootComponent/>}/>
+                <Route path={'/register'} element={<AuthRootComponent/>}/>
 
             </Routes>
 
