@@ -1,0 +1,18 @@
+/* Log.module.css */
+.logHeader {
+    color: #3498db;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.logList {
+    list-style: none;
+    padding: 0;
+}
+
+.logItem {
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 8px;
+    margin-bottom: 8px;
+}
