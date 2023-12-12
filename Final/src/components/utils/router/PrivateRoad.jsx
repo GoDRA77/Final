@@ -1,7 +1,7 @@
 import {Navigate, Outlet} from "react-router-dom";
-import {useAuth} from "../hook/hook.jsx";
+//import {useAuth} from "../hook/hook.jsx";
 const PrivateRoad = () => {
-    const auth = useAuth()
+    const auth = true  //useAuth()
     return (
         auth ? <Outlet/> : <Navigate to="login" />
     );

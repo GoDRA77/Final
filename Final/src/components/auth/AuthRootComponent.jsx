@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import Log from "./log/Log.jsx";
-
 import Register from "./register/Register.jsx";
 import './StyleAuth.scss'
 import {Box} from "@mui/material";
@@ -45,6 +44,7 @@ const AuthRootComponent = () => {
 
                     }
                     const newUser = await instance.post('auth/register/', userData);
+                    console.log(newUser)
                     await dispatch(login(newUser.data))
                     navigate('/')
                 }catch (error) {
@@ -58,8 +58,10 @@ const AuthRootComponent = () => {
         }
     }
 
+
+
     return (
-        <div className='root'>
+        <div className='HAHA'>
            <form className="form" onSubmit={handleSubmit}>
                <Box
                    display='flex'
@@ -82,7 +84,7 @@ const AuthRootComponent = () => {
                                        setRepeatPassword={setRepeatPassword}
                                        setFirstName={setFirstname}
                                        setUsername={setUsername}/>
-                           : null}
+                             : null}
                </Box>
            </form>
         </div>
