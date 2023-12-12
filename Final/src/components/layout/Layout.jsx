@@ -19,15 +19,23 @@ const LayoutComponent = ({children}) => {
             ) : (
                 <>
                    <Box display={isNonMobile ? 'flex' : 'block'} width='100%' height='100%' >
-                        < SideBarComponent
-                            isNonMobile={isNonMobile}
-                            drawerWidth='250'
-                            isOpen={isOpen}
-                            SetIsOpen={SetIsOpen}
-                        />
+
                        <Box>
-                           <TopBarComponent />
+                           <TopBarComponent
+                               isOpen={isOpen}
+                               SetIsOpen={SetIsOpen}
+
+                           />
+                           <div >
+                           < SideBarComponent
+                               isNonMobile={isNonMobile}
+                               drawerWidth='250'
+                               isOpen={isOpen}
+                               SetIsOpen={SetIsOpen}
+                           />
+
                            {children}
+                           </div>
 
                        </Box>
                    </Box>

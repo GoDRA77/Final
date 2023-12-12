@@ -1,19 +1,25 @@
-import React, {useContext} from 'react';
+import React, {useContext,} from 'react';
 import {Box, Grid, IconButton, InputBase, useTheme} from "@mui/material";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import {ColorModeContext, tokens} from "../../theme/Theme.jsx";
+import { ChevronRightOutlined} from "@mui/icons-material";
 
 
-const TopBarComponent = () => {
+
+const TopBarComponent = (props) => {
     const theme = useTheme()
+    // const [isOpen, SetIsOpen] = useState(true)
     const colors = tokens(theme.palette.mode)
     const colorMode = useContext(ColorModeContext)
     return (
         <Box display='flex' justifyContent='space-between' px="32px" py="24px">
             <Grid>Welcome client</Grid>
+            <IconButton onClick={() => props.SetIsOpen(!props.isOpen)}>
+                <ChevronRightOutlined/>
+            </IconButton>
             <Box display='flex'>
                 <Grid onClick={colorMode.toggleColorMode}>
                     <IconButton>

@@ -15,7 +15,7 @@ export const navMenu = [
     {
         name: 'Создать',
         icon: <AutoGraphOutlined />,
-        path: '/contact',
+        path: '/create',
         id: 2
     },
     {
